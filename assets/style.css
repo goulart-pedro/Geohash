@@ -1,0 +1,257 @@
+/* assets/style.css — mesma paleta e estrutura do projeto original (TP1-Alg2) */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+    color: #2c3e50;
+}
+
+.main-container {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título */
+.app-header {
+    text-align: center;
+    padding: 10px 0 0;
+}
+
+.app-title {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.section-title {
+    margin-top: 30px;
+    color: #2c3e50;
+    font-size: 1.8em;
+    font-weight: 500;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Cartões (controles, tabela) */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+/* Controles */
+.controls-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+    margin-bottom: 12px;
+}
+
+.controls-row:last-child {
+    margin-bottom: 0;
+}
+
+.controls-footer {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 160px;
+    flex: 1;
+}
+
+.field-wide {
+    flex: 1 1 100%;
+}
+
+.field-button {
+    flex: 0 0 auto;
+    min-width: 0;
+}
+
+.field-label {
+    font-size: 13px;
+    color: #666;
+    font-weight: bold;
+}
+
+.input {
+    height: 36px;
+    padding: 0 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.btn {
+    height: 36px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.checklist {
+    font-size: 14px;
+}
+
+.status {
+    font-size: 13px;
+    color: #666;
+    min-height: 20px;
+}
+
+/* Legenda */
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    margin: 14px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.legend-hint {
+    margin-left: auto;
+    font-style: italic;
+}
+
+/* Mapa */
+.map-container {
+    height: 60vh;
+    min-height: 420px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.pin-icon {
+    background: transparent;
+    border: none;
+}
+
+/* Métricas */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.metric-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 14px 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.metric-label {
+    font-size: 12px;
+    color: #666;
+    font-weight: bold;
+}
+
+.metric-value {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 4px;
+    color: #2c3e50;
+}
+
+.metric-sub {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.metrics-empty {
+    grid-column: 1 / -1;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Tabela */
+.table-wrapper {
+    margin-top: 20px;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner tr:hover td {
+    background-color: #d4edda !important;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 10px;
+    }
+
+    .app-title {
+        font-size: 1.8em;
+    }
+
+    .section-title {
+        font-size: 1.4em;
+    }
+
+    .legend-hint {
+        margin-left: 0;
+    }
+
+    .map-container {
+        height: 50vh;
+    }
+}
